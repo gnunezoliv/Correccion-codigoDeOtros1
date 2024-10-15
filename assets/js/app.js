@@ -6,19 +6,22 @@ const $n = document.querySelector('#name');
 const $b = document.querySelector('#blog');
 const $l = document.querySelector('#location');
 
-function displayUser(username) {
-  
-  $n.textContent = 'cargando...';
-  const response = fetch (`${usersEndpoint}/${username}`);/* se quitó el await */
-  console.log(data);
-  $n.textContent = '${data.name}';
-  $b.textContent = '${data.blog}';
-  $l.textContent = '${data.location}';
-}
-function handleError(err) {
-  console.log('OH NO!');
-  console.log(err);
-  n.textContent = `Algo salió mal: ${err}`
-}
+async function displayUser(username) { /*Fucion asincrona para usar await*/ 
 
-displayUser('stolinski').catch(handleError);
+  try {
+    $n.textContent = 'cargando...';
+    const response = await fetch(`${usersEndpoint}/${username}`);
+    console.log(data);
+    $n.textContent = '${data.name}';
+    $b.textContent = '${data.blog}';
+    $l.textContent = '${data.location}';
+  }
+  catch {
+  }
+  function handleError(err) {
+    console.log('OH NO!');
+    console.log(err);
+    n.textContent = `Algo salió mal: ${err}`
+  }
+}
+return displayUser('stolinski').catch(handleError);
