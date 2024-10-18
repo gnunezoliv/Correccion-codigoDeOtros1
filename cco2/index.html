@@ -1,0 +1,54 @@
+<!DOCTYPE html> <!--Renombrar archivo index.html-->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> <!--Link bootstrap styles-->
+  <link rel="stylesheet" type="text/css" media="screen" href="/styles.css">
+  <title>Formulario</title>
+</head>
+
+<body>
+
+  <h1>Bienvenidos a mi fiesta</h1>
+  <h2>Por favor, confirmar asistencia:</h2>
+
+  <!--Se agregó formato de formulario bootstrap-->
+<form class="form">
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input type="name" class="form-control" id="name" placeholder="Pepe Pecas" required>
+  </div>
+  <div class="form-group">
+    <label for="edad">Edad</label>
+    <input type="age" class="form-control" id="age" placeholder="+18 & -120" required>
+  </div>
+  <div class="form-group">
+    <label for="correo">Correo Electronico</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+  </div>
+  <div class="form-group">
+    <label for="nacionalidad">Nacionalidad</label>
+    <select type= "nationality" class="form-control" id="nation" required>
+      <option value="ar">Argentina</option>
+      <option value="mx">Mexicana</option>
+      <option value="per">Peruana</option>
+      <option value="vnzl">Venezolana</option>
+    </select>
+  </div>
+  
+  <button id="submit-button" type="submit" class="btn btn-outline-success">Enviar</button> <!--Se cambió el tipo de boton-->
+</form>
+
+
+<div id="guest-list"><!--Se agregó espacio para poner la lista-->
+  <h2>Lista de invitados</h2>
+  <div> guests </div>
+</div>
+
+<script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> <!--Bootstrap Javascript-->
+</body>
+</html>
